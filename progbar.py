@@ -5,8 +5,8 @@ from .style import *
 
 class progBar(tk.Frame):
 	def __init__(self, frame):
-		tk.Frame.__init__(self,frame,background=style.w)
-		self.progress = tk.Frame(self, background=style.dark_color)
+		tk.Frame.__init__(self,frame,background=w)
+		self.progress = tk.Frame(self, background=dark_color)
 		self.geo = None
 		self.placed = False
 		self.setValue(None)
@@ -15,7 +15,7 @@ class progBar(tk.Frame):
 		if val and not val == 0:
 			if not self.placed:
 				self.show()
-			self.progress.place(x=style.offset, y=style.offset, relheight=1, height=-(2*style.offset),relwidth=(val/100.0),width=-2*style.offset)
+			self.progress.place(x=offset, y=offset, relheight=1, height=-(2*offset),relwidth=(val/100.0),width=-2*offset)
 		else:
 			if self.placed:
 				self.hide()
