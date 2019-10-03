@@ -5,7 +5,7 @@
 import platform, os
 import tkinter as tk
 from tkinter.constants import *
-from modules.style import *
+from .style import *
 #Basic Widgets
 
 #Frame to use instead of default tk.frame, by default themed with light_color

@@ -1,14 +1,14 @@
-import modules.style as style
+from style import *
 import tkinter as tk
 
 class searchBox(tk.Frame):
     def __init__(self, frame, entry_width=30, 
-        entry_font=style.mediumboldtext, 
-        entry_background=style.w, 
-        entry_foreground=style.b,
+        entry_font=mediumboldtext, 
+        entry_background=w, 
+        entry_foreground=b,
         placeholder="Search", 
-        placeholder_font=style.mediumboldtext, 
-        placeholder_color=style.lg,
+        placeholder_font=mediumboldtext, 
+        placeholder_color=lg,
         command=None,
         command_on_keystroke = True,
         ):
@@ -20,11 +20,11 @@ class searchBox(tk.Frame):
         self.entry = tk.Entry(self,
             width=entry_width,
             background=entry_background,
-            highlightcolor=style.b, highlightthickness=0,
+            highlightcolor=b, highlightthickness=0,
             foreground = entry_foreground,
             borderwidth=2,
             relief = tk.constants.RIDGE)
-        self.entry.place(x=+style.offset,y=0,relwidth=1,relheight=1,width=-style.offset)
+        self.entry.place(x=+offset,y=0,relwidth=1,relheight=1,width=-offset)
         
         if entry_font:
             self.entry.configure(font=entry_font)

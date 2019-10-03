@@ -1,5 +1,5 @@
 import tkinter as tk
-import modules.style as style
+from style import *
 from .progbar import progBar
 
 class progressFrame(tk.Frame):

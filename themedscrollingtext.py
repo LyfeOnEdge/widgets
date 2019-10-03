@@ -1,9 +1,9 @@
 from .customwidgets import scrolledText
-import modules.style
+from style import *
 
 class themedScrollingText(scrolledText):
 	def __init__(self, text = ""):
-		scrolledText.__init__(wrap = "word", font = style.mediumtext)
+		scrolledText.__init__(wrap = "word", font = mediumtext)
 		self.set(text)
 
 	def clear(self):

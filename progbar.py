@@ -1,5 +1,5 @@
 import tkinter as tk
-import modules.style as style
+from .style import *
 
 #A super basic progress bar
 
