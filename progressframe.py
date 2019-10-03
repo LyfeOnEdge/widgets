@@ -4,7 +4,7 @@ from .progbar import progBar
 
 class progressFrame(tk.Frame):
     def __init__(self, frame):
-        tk.Frame.__init__(self,frame,background=style.w)
+        tk.Frame.__init__(self,frame,background=w)
         self.framework = frame
         self.progress = None
         self.progress_text = tk.StringVar()
@@ -14,25 +14,25 @@ class progressFrame(tk.Frame):
         self.display_value = 0
 
         self.progresstitle = tk.Label(self,
-            background = style.w,
+            background = w,
             highlightthickness=0,
             anchor="center",
-            font=style.hugeboldtext,
-            foreground= style.b,
+            font=hugeboldtext,
+            foreground= b,
             textvariable = self.title,
-            ).place(relwidth = 1, height = style.progressbarheight, width = -2*style.offset, rely = 0.25, y = - (2 * style.progressbarheight + 2 * style.offset))
+            ).place(relwidth = 1, height = progressbarheight, width = -2*offset, rely = 0.25, y = - (2 * progressbarheight + 2 * offset))
 
         self.progbartext = tk.Label(self,
-            background = style.w,
+            background = w,
             highlightthickness=0,
             anchor="center",
-            font=style.largeboldtext,
-            foreground= style.lg,
+            font=largeboldtext,
+            foreground= lg,
             textvariable = self.progress_text,
-            ).place(relwidth = 1, height = style.progressbarheight, width = -2*style.offset, rely = 0.5, y = - (2 * style.progressbarheight + 2 * style.offset))
+            ).place(relwidth = 1, height = progressbarheight, width = -2*offset, rely = 0.5, y = - (2 * progressbarheight + 2 * offset))
 
         self.progbar = progBar(self)
-        self.progbar.Place(relwidth = 1, height = style.progressbarheight, width = -2*style.offset, rely = 0.5, y = - style.progressbarheight / 2)
+        self.progbar.Place(relwidth = 1, height = progressbarheight, width = -2*offset, rely = 0.5, y = - progressbarheight / 2)
 
     def set_title(self, title):
         self.title.set(title)
