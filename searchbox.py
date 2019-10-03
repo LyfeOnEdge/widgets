@@ -1,4 +1,4 @@
-from style import *
+from .style import *
 import tkinter as tk
 
 class searchBox(tk.Frame):

@@ -1,5 +1,5 @@
 from .customwidgets import scrolledText
-from style import *
+from .style import *
 
 class themedScrollingText(scrolledText):
 	def __init__(self, text = ""):
