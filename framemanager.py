@@ -7,18 +7,13 @@ class frameManager(tk.Tk):
     def __init__(self, 
                 pages, #List of pages to put in outermost z-layer
                 geometry, #Startup size
-                appstore_handler, #Object to manage appstore sd content
-                repo_parser, #Object to deal with the appstore json
                 async_threader, #object to easily deal with a few async function
                 image_sharer, #Simple tool to have one base location to lookup images
-                update_status #Whether or not the app needs an update
+                update_status = None #Whether or not the app needs an update
                 ): 
-
         tk.Tk.__init__(self)
         self.update_status = update_status
         self.async_threader = async_threader
-        self.appstore_handler = appstore_handler
-        self.repo_parser = repo_parser
         self.image_sharer = image_sharer
         self.geometry("{}x{}".format(geometry["width"],geometry["height"])) 
         # self.resizable(False, False)
@@ -41,6 +36,8 @@ class frameManager(tk.Tk):
 
                 #place the frame to fill the whole window, stack them all in the same place
                 frame.grid(row=0, column=0, sticky="nsew")
+        else:
+            print("No pages found")
 
 
     def show_frame(self, page_name):
